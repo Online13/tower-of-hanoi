@@ -1,0 +1,25 @@
+{
+  "name": "hanoi",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "index.html",
+  "scripts": {
+    "dev": "tsc -w",
+    "style": "sass ./assets/styles/style.scss:./assets/styles/style.css --watch",
+    "build:style": "sass ./assets/styles/style.scss:./assets/styles/style.css --style compressed --sourcemap=none",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.4.9"
+  }
+}
