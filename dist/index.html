@@ -1,1 +1,146 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tour d'Hanoï</title><link rel="stylesheet" href="/index.2b1b9a13.css"></head><body> <div class="portal"> <div class="modal"> <div class="modal-header"> <h2>A propos.</h2> <button class="btn-close-about">&times;</button> </div> <div class="modal-content"> <p> Les <b>tours de Hanoï</b> (originellement, la tour d'Hanoïa) <b>sont un jeu</b> de réflexion imaginé par le mathématicien français Édouard Lucas, et <b>consistant à déplacer des disques de diamètres différents d'une tour de « départ » à une tour d'« arrivée » en passant par une tour « intermédiaire », et ceci en un minimum de coups</b>, tout en respectant les règles suivantes </p> <ul> <li>on ne peut déplacer plus d'un disque à la fois ;</li> <li>on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide.</li> </ul> </div> </div> </div> <div class="loader"> <img src="/bg.1bcedb33.svg" alt="background of loader" class="bg"> <h1>Tour d'hanoï</h1> </div> <div id="container"> <main class="main"> <div class="container"> <div class="content"> <div class="intermediate"></div> <div class="zone-list"> <div class="zone zone-1"></div> <div class="zone zone-2"></div> <div class="zone zone-3"></div> </div> <div class="zone-to-select"> <div class="zone-1 zone-item"></div> <div class="zone-2 zone-item"></div> <div class="zone-3 zone-item"></div> </div> </div> </div> <div class="actions"> <button class="btn btn-info"> <svg version="1.1" id="Layer_1" x="0" y="0" style="enable-background:new 0 0 512.011 512.011" xml:space="preserve" viewBox="0 0 512.011 512.011"><circle style="fill:#ffd782" cx="256.005" cy="256.005" r="256.005"/><path style="opacity:.1;enable-background:new" d="M71.331 255.999c0-129.28 95.835-236.158 220.334-253.515A258.349 258.349 0 0 0 255.999 0C114.615 0 0 114.615 0 255.999c0 141.385 114.615 255.999 255.999 255.999 12.105 0 24.007-.86 35.665-2.485C167.166 492.157 71.331 385.279 71.331 255.999z"/><g><rect x="221.469" y="195.648" style="fill:#515262" width="69.06" height="233.667"/><circle style="fill:#515262" cx="256.005" cy="122.13" r="40.682"/></g></svg> </button> <button class="btn btn-solve"> <svg version="1.1" id="Layer_1" x="0" y="0" style="enable-background:new 0 0 500.267 500.267" xml:space="preserve" viewBox="0 0 500.267 500.267"><path style="fill:#fec656" d="M370.667 222.933c0-68.267-56.533-123.733-125.867-120.533-61.867 2.133-112 52.267-116.267 114.133-2.133 30.933 8.533 58.667 25.6 81.067 17.067 21.333 25.6 48 25.6 74.667v2.133H318.4v-2.133c0-26.667 8.533-53.333 25.6-74.667 17.067-20.267 26.667-45.867 26.667-74.667z"/><path style="fill:#60c3ab" d="M319.467 374.4H180.8v56.533c0 38.4 30.933 69.333 69.333 69.333s69.333-30.933 69.333-69.333V374.4z"/><g><rect x="15.467" y="205.867" style="fill:#e0e0df" width="85.333" height="29.867"/><rect x="399.467" y="205.867" style="fill:#e0e0df" width="85.333" height="29.867"/><rect x="235.2" style="fill:#e0e0df" width="29.867" height="70.4"/><rect x="82.756" y="74.295" transform="rotate(-134.999 117.956 89.229)" style="fill:#e0e0df" width="70.399" height="29.866"/><rect x="346.095" y="337.833" transform="rotate(-134.999 381.295 352.769)" style="fill:#e0e0df" width="70.399" height="29.866"/><rect x="346.608" y="74.312" transform="rotate(-45.001 381.809 89.25)" style="fill:#e0e0df" width="70.399" height="29.866"/><rect x="83.312" y="337.397" transform="rotate(-45.001 118.508 352.333)" style="fill:#e0e0df" width="70.399" height="29.866"/></g><g><path style="fill:#fff" d="M291.733 222.933c-12.8 0-23.467 10.667-23.467 23.467v13.867H232v-14.933c0-12.8-10.667-23.467-23.467-23.467s-23.467 10.667-23.467 23.467v1.067c0 12.8 10.667 23.467 23.467 23.467H222.4V374.4h9.6V270.933h36.266v104.533h9.6V270.933h13.867c12.8 0 23.467-10.667 23.467-23.467V246.4c0-12.8-10.667-23.467-23.467-23.467zM222.4 260.267h-13.867c-7.467 0-13.867-6.4-13.867-13.867v-1.067c0-7.467 6.4-13.867 13.867-13.867 7.467 0 13.867 6.4 13.867 13.867v14.934zm82.133-12.8c0 7.467-6.4 13.867-13.867 13.867H276.8V246.4c0-7.467 6.4-13.867 13.867-13.867 7.467 0 13.867 6.4 13.867 13.867v1.067z"/><rect x="201.067" y="397.867" style="fill:#fff" width="97.067" height="24.533"/><rect x="214.933" y="442.667" style="fill:#fff" width="70.4" height="24.533"/></g></svg> </button> <button class="btn btn-setting"> <svg width="48" height="48" fill="none"><rect width="48" height="48" fill="#fff" fill-opacity=".01"/><path d="M41.5 10h-6M27.5 6v8M27.5 10h-22M13.5 24h-8M21.5 20v8M43.5 24h-22M41.5 38h-6M27.5 34v8M27.5 38h-22" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg> </button> </div> </main> <div class="sidebar sidebar-setting"> <div class="sidebar-content"> <h3 class="sidebar-title">Paramètres</h3> <div class="content"> <div class="form-group"> <label for="nbDiscInput">Nombre de disque : </label> <div class="form-input"> <input type="range" name="nbDisc" id="nbDiscInput" min="2" max="20"> <output name="value" id="nbDiscOutput"></output> </div> </div> <div class="form-group"> <label for="durationInput">Durée du déplacement : </label> <div class="form-input"> <input type="range" name="durationInput" id="durationInput" min="20" max="300"> <output name="value" id="durationOutput"></output> <span class="unit">ms</span> </div> </div> <div class="form-group"> <label for="delayInput">Durée du latence : </label> <div class="form-input"> <input type="range" name="delayInput" id="delayInput" min="20" max="400"> <output name="value" id="delayOutput"></output> <span class="unit">ms</span> </div> </div> </div> </div> </div> </div> <script type="module" src="/index.47d0ff16.js"></script><script src="/index.8f2f2f42.js" nomodule="" defer></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour d'Hanoï</title>
+  <link rel="stylesheet" href="/index.939b9244.css">
+</head>
+
+<body>
+  <div class="portal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>A propos.</h2>
+        <button class="btn-close-about">&times;</button>
+      </div>
+      <div class="modal-content">
+        <p>
+          Les <b>tours de Hanoï</b> (originellement, la tour d'Hanoïa) <b>sont un jeu</b> de réflexion imaginé par le mathématicien français Édouard Lucas, et <b>consistant à déplacer des disques de diamètres différents d'une tour de « départ » à une tour d'« arrivée » en passant par une tour « intermédiaire », et ceci en un minimum de coups</b>, tout en respectant les règles suivantes 
+        </p>
+        <ul>
+          <li>on ne peut déplacer plus d'un disque à la fois ;</li>
+          <li>on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="loader">
+    <img src="/bg.87a25a11.svg" alt="background of loader" class="bg">
+    <h1>Tour d'hanoï</h1>
+  </div>
+  <div id="container">
+    <main class="main">
+      <div class="container">
+        <div class="content">
+          <div class="intermediate"></div>
+          <div class="zone-list">
+            <div class="zone zone-1"></div>
+            <div class="zone zone-2"></div>
+            <div class="zone zone-3"></div>
+          </div>
+          <div class="zone-to-select">
+            <div class="zone-item zone-1"></div>
+            <div class="zone-item zone-2"></div>
+            <div class="zone-item zone-3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-info">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512.011 512.011" style="enable-background: new 0 0 512.011 512.011" xml:space="preserve">
+            <circle style="fill: #ffd782" cx="256.005" cy="256.005" r="256.005"></circle>
+            <path style="opacity: .1; enable-background: new" d="M71.331,255.999c0-129.28,95.835-236.158,220.334-253.515
+      C280.007,0.86,268.104,0,255.999,0C114.615,0,0,114.615,0,255.999c0,141.385,114.615,255.999,255.999,255.999
+      c12.105,0,24.007-0.86,35.665-2.485C167.166,492.157,71.331,385.279,71.331,255.999z"></path>
+            <g>
+              <rect x="221.469" y="195.648" style="fill: #515262" width="69.06" height="233.667"></rect>
+              <circle style="fill: #515262" cx="256.005" cy="122.13" r="40.682"></circle>
+            </g>
+          </svg>
+        </button>
+        <button class="btn btn-solve">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 500.267 500.267" style="enable-background: new 0 0 500.267 500.267" xml:space="preserve">
+            <path style="fill: #fec656" d="M370.667,222.933c0-68.267-56.533-123.733-125.867-120.533c-61.867,2.133-112,52.267-116.267,114.133
+      c-2.133,30.933,8.533,58.667,25.6,81.067c17.067,21.333,25.6,48,25.6,74.667v2.133H318.4v-2.133c0-26.667,8.533-53.333,25.6-74.667
+      C361.067,277.333,370.667,251.733,370.667,222.933z"></path>
+            <path style="fill: #60c3ab" d="M319.467,374.4H180.8v54.4l0,0c0,1.067,0,1.067,0,2.133c0,38.4,30.933,69.333,69.333,69.333
+      s69.333-30.933,69.333-69.333c0-1.067,0-1.067,0-2.133l0,0V374.4z"></path>
+            <g>
+              <rect x="15.467" y="205.867" style="fill: #e0e0df" width="85.333" height="29.867"></rect>
+              <rect x="399.467" y="205.867" style="fill: #e0e0df" width="85.333" height="29.867"></rect>
+              <rect x="235.2" style="fill: #e0e0df" width="29.867" height="70.4"></rect>
+
+              <rect x="82.756" y="74.295" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 138.2689 235.729)" style="fill: #e0e0df" width="70.399" height="29.866"></rect>
+
+              <rect x="346.095" y="337.833" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 401.4662 871.8259)" style="fill: #e0e0df" width="70.399" height="29.866"></rect>
+
+              <rect x="346.608" y="74.312" transform="matrix(0.7071 -0.7071 0.7071 0.7071 48.7234 296.1182)" style="fill: #e0e0df" width="70.399" height="29.866"></rect>
+
+              <rect x="83.312" y="337.397" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -214.4238 186.9958)" style="fill: #e0e0df" width="70.399" height="29.866"></rect>
+            </g>
+            <g>
+              <path style="fill: #fff" d="M291.733,222.933c-12.8,0-23.467,10.667-23.467,23.467v13.867h-18.133H232v-14.933
+        c0-12.8-10.667-23.467-23.467-23.467s-23.467,10.667-23.467,23.467v1.067c0,12.8,10.667,23.467,23.467,23.467H222.4V374.4h9.6
+        V270.933h18.133h18.133v104.533h9.6V270.933h13.867c12.8,0,23.467-10.667,23.467-23.467V246.4
+        C315.2,233.6,304.533,222.933,291.733,222.933z M222.4,260.267h-13.867c-7.467,0-13.867-6.4-13.867-13.867v-1.067
+        c0-7.467,6.4-13.867,13.867-13.867c7.467,0,13.867,6.4,13.867,13.867V260.267z M304.533,247.467c0,7.467-6.4,13.867-13.867,13.867
+        H276.8V246.4c0-7.467,6.4-13.867,13.867-13.867c7.467,0,13.867,6.4,13.867,13.867V247.467z"></path>
+              <rect x="201.067" y="397.867" style="fill: #fff" width="97.067" height="24.533"></rect>
+              <rect x="214.933" y="442.667" style="fill: #fff" width="70.4" height="24.533"></rect>
+            </g>
+          </svg>
+        </button>
+        <button class="btn btn-setting">
+          <svg width="48px" height="48px" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+            <path d="M41.5 10H35.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M27.5 6V14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M27.5 10L5.5 10" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13.5 24H5.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M21.5 20V28" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M43.5 24H21.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M41.5 38H35.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M27.5 34V42" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M27.5 38H5.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </main>
+    <div class="sidebar sidebar-setting">
+      <div class="sidebar-content">
+        <h3 class="sidebar-title">Paramètres</h3>
+        <div class="content">
+          <div class="form-group">
+            <label for="nbDiscInput">Nombre de disque : </label>
+            <div class="form-input">
+              <input type="range" name="nbDisc" id="nbDiscInput" min="2" max="20">
+              <output name="value" id="nbDiscOutput"></output>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="durationInput">Durée du déplacement : </label>
+            <div class="form-input">
+              <input type="range" name="durationInput" id="durationInput" min="20" max="300">
+              <output name="value" id="durationOutput"></output>
+              <span class="unit">ms</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="delayInput">Durée du latence : </label>
+            <div class="form-input">
+              <input type="range" name="delayInput" id="delayInput" min="20" max="400">
+              <output name="value" id="delayOutput"></output>
+              <span class="unit">ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/index.fc041ec5.js" defer=""></script>
+</body>
+
+</html>

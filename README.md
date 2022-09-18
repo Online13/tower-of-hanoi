@@ -1,7 +1,7 @@
 # Tower of Hanoi
 
 
-<img src="screenshot.png" alt="screenshot of my project" />
+<img src="screenshot.gif" alt="screenshot of my project" />
 
 Solve a tower of Hanoi with `n` bloc using recursive algorithm. 
 
